@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Daftar Proyek — Portofolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0f1724;
+      --card:#0b1220cc;
+      --accent1:#7c3aed;
+      --accent2:#06b6d4;
+      --glass: rgba(255,255,255,0.04);
+      --muted: rgba(255,255,255,0.6);
+      --radius:16px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      background: radial-gradient(1000px 500px at 10% 10%, rgba(124,58,237,0.12), transparent),
+                  radial-gradient(800px 400px at 90% 90%, rgba(6,182,212,0.08), transparent),
+                  var(--bg);
+      color:#e6eef8;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.5;
+      padding:40px 28px;
+    }
+    .container{max-width:1100px;margin:0 auto}
+    header{display:flex;align-items:center;justify-content:space-between;margin-bottom:32px}
+    .brand{display:flex;align-items:center;gap:14px}
+    .logo{
+      width:48px;height:48px;border-radius:12px;display:inline-grid;place-items:center;font-weight:700;
+      background:linear-gradient(135deg,var(--accent1),var(--accent2));box-shadow:0 6px 20px rgba(12,18,32,0.6);
+    }
+    .brand h1{font-family:Poppins, Inter;margin:0;font-size:18px}
+    nav{display:flex;gap:18px;align-items:center}
+    nav a{color:var(--muted);text-decoration:none;font-weight:600;font-size:14px}
+    .cta{padding:9px 13px;border-radius:12px;background:linear-gradient(90deg,var(--accent1),var(--accent2));font-weight:700}
+
+    h2{margin:0 0 8px 0;font-size:24px}
+    .muted{color:var(--muted)}
+
+    .projects-grid{display:grid;grid-template-columns:repeat(2, minmax(0, 1fr));gap:18px;margin-top:20px}
+    .project-card{
+      background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);
+      padding:18px;border-radius:14px;
+      border:1px solid rgba(255,255,255,0.04);
+      transition:transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+    }
+    .project-card:hover{
+      transform:translateY(-6px);
+      box-shadow:0 16px 36px rgba(2,6,23,0.7);
+      border-color:rgba(94,234,212,0.3);
+    }
+    .project-title{margin:0 0 6px 0;font-size:16px}
+    .project-meta{font-size:13px;color:var(--muted);margin-bottom:8px}
+    .tags{margin-top:10px;display:flex;gap:8px;flex-wrap:wrap}
+    .tag{font-size:12px;padding:6px 8px;border-radius:999px;background:rgba(255,255,255,0.04)}
+
+    .back-link{display:inline-flex;align-items:center;gap:6px;margin-top:20px;font-size:14px;text-decoration:none;color:var(--muted)}
+
+    footer{margin-top:32px;text-align:center;color:var(--muted);font-size:13px}
+
+    @media (max-width:780px){
+      .projects-grid{grid-template-columns:1fr}
+      body{padding:24px}
+      nav{display:none}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">PM</div>
+        <div>
+          <h1>Daftar Proyek</h1>
+          <div class="muted">Kumpulan proyek lengkap yang pernah saya kerjakan</div>
+        </div>
+      </div>
+      <nav>
+        <a href="index.html">Beranda</a>
+        <a href="#list" class="cta">Lihat semua proyek</a>
+      </nav>
+    </header>
+
+    <main id="list">
+      <section>
+        <h2>Semua Proyek</h2>
+        <p class="muted">Berikut adalah beberapa proyek yang mewakili kemampuan saya dalam frontend, UI/UX, dan pengembangan produk digital.</p>
+
+        <div class="projects-grid">
+          <article class="project-card">
+            <h3 class="project-title">Dashboard Analitik Operasional</h3>
+            <div class="project-meta">Web app analitik real-time untuk tim operasional dan manajemen.</div>
+            <p class="muted">Menyusun arsitektur front-end, rancangan visual, dan integrasi dengan API untuk menampilkan KPI utama secara ringkas.</p>
+            <div class="tags">
+              <span class="tag">React</span>
+              <span class="tag">D3.js</span>
+              <span class="tag">Design System</span>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <h3 class="project-title">Platform E‑commerce</h3>
+            <div class="project-meta">Toko online responsif dengan alur checkout yang dioptimalkan.</div>
+            <p class="muted">Fokus pada kecepatan, struktur informasi yang jelas, dan pengalaman pengguna yang minim friksi sampai pembayaran.</p>
+            <div class="tags">
+              <span class="tag">Next.js</span>
+              <span class="tag">Stripe</span>
+              <span class="tag">UX Flow</span>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <h3 class="project-title">Landing Page Kampanye Produk</h3>
+            <div class="project-meta">Landing page berkonversi tinggi untuk peluncuran produk baru.</div>
+            <p class="muted">Eksperimen layout, copywriting, dan variasi visual untuk kebutuhan A/B testing dan optimasi konversi.</p>
+            <div class="tags">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">A/B Testing</span>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <h3 class="project-title">Sistem Design Component Library</h3>
+            <div class="project-meta">Perpustakaan komponen UI yang konsisten untuk beberapa produk internal.</div>
+            <p class="muted">Mendefinisikan token desain, pola komponen, dan dokumentasi sehingga tim bisa bergerak lebih cepat dan konsisten.</p>
+            <div class="tags">
+              <span class="tag">Design System</span>
+              <span class="tag">Storybook</span>
+              <span class="tag">Figma</span>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <h3 class="project-title">Dashboard Monitoring Infrastruktur</h3>
+            <div class="project-meta">Interface monitoring untuk server dan layanan cloud.</div>
+            <p class="muted">Menampilkan status sistem, grafik performa, dan notifikasi error dengan visual yang jelas dan mudah dipindai.</p>
+            <div class="tags">
+              <span class="tag">Vue / React</span>
+              <span class="tag">Charts</span>
+              <span class="tag">UX</span>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <h3 class="project-title">Website Portfolio Kreatif</h3>
+            <div class="project-meta">Portofolio personal dengan fokus pada tipografi dan micro-interaction.</div>
+            <p class="muted">Eksplorasi kombinasi warna gelap, efek glassmorphism, dan hierarki visual agar tetap elegan dan mudah dibaca.</p>
+            <div class="tags">
+              <span class="tag">UI/UX</span>
+              <span class="tag">Frontend</span>
+              <span class="tag">Interaction Design</span>
+            </div>
+          </article>
+        </div>
+
+        <a class="back-link" href="index.html">← Kembali ke beranda</a>
+      </section>
+    </main>
+
+    <footer>© <span id="year"></span> Nama Kamu — Semua hak dilindungi</footer>
+  </div>
+
+  <script>
+    (function(){
+      try{
+        document.getElementById('year').textContent = new Date().getFullYear();
+      }catch(e){}
+    })();
+  </script>
+</body>
+</html>
