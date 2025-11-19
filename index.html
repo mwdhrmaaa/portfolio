@@ -47,8 +47,8 @@
     .logo img{width:100%;height:100%;object-fit:cover;display:block}
     .brand h1{font-family:Poppins, Inter;margin:0;font-size:18px}
     nav{display:flex;gap:18px;align-items:center}
-    nav a{color:var(--muted);text-decoration:none;font-weight:600;font-size:14px}
-    .cta{padding:10px 14px;border-radius:12px;background:#b91c1c;box-shadow:0 8px 30px rgba(127,29,29,0.6);font-weight:700}
+    nav a{color:var(--muted);text-decoration:none;font-weight:600;font-size:14px;padding:10px 14px;border-radius:12px}
+    .cta{font-weight:700}
 
     /* Hero */
     .hero{display:grid;grid-template-columns:1fr 380px;gap:28px;align-items:center;margin-bottom:40px}
@@ -97,8 +97,39 @@
     }
 
     /* small utilities */
+    a{color:var(--accent2)}
     .muted{color:var(--muted)}
     a.no-underline{text-decoration:none}
+    h3{
+      transition:color .2s ease, transform .2s ease;
+    }
+    h3:hover{
+      color:#b91c1c;
+      transform:translateY(-2px);
+    }
+    /* hover untuk area kontak, judul section, navbar & tombol */
+    nav a,
+    #projects h3,
+    #about h3,
+    #contact h3,
+    #contact a,
+    .btn-submit,
+    .contact-btn{
+      transition:color .2s ease, background-color .2s ease, transform .2s ease, box-shadow .2s ease;
+      border-radius:12px;
+    }
+    nav a:hover,
+    #projects h3:hover,
+    #about h3:hover,
+    #contact h3:hover,
+    #contact a:hover,
+    .btn-submit:hover,
+    .contact-btn:hover{
+      color:#fca5a5;
+      background-color:#b91c1c;
+      transform:translateY(-2px);
+      box-shadow:0 10px 30px rgba(248,113,113,0.6);
+    }
   </style>
 </head>
 <body>
@@ -141,7 +172,7 @@
             <a class="contact-btn" href="#contact">Kirim pesan</a>
           </div>
         </div>
-        <div style="margin-top:14px;color:var(--muted);font-size:14px">Lokasi • Bali · Tersedia untuk kontrak</div>
+        <div style="margin-top:14px;color:var(--muted);font-size:14px">Lokasi • Indonesia · Tersedia untuk kontrak</div>
       </aside>
     </section>
 
