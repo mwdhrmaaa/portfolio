@@ -57,7 +57,7 @@
     .intro h2{margin:0 0 8px 0;font-size:28px}
     .intro p{margin:0 0 16px;color:var(--muted)}
     .skills{display:flex;gap:8px;flex-wrap:wrap}
-    .chip{background:var(--glass);padding:8px 12px;border-radius:999px;font-weight:600;font-size:13px;color:var(--muted)}
+    .chip{background:var(--glass);padding:8px 12px;border-radius:999px;font-weight:600;font-size:13px;color:#ffffff}
 
     /* Profile card */
     .profile{background:linear-gradient(135deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:22px;border-radius:18px;position:relative;overflow:hidden}
@@ -77,11 +77,18 @@
     .card h4{margin:0 0 8px}
     .card p{margin:0;color:var(--muted);font-size:14px}
     .tags{margin-top:12px;display:flex;gap:8px;flex-wrap:wrap}
-    .tag{font-size:12px;padding:6px 8px;border-radius:8px;background:rgba(255,255,255,0.03)}
+    .tag{font-size:12px;padding:6px 8px;border-radius:8px;background:rgba(255,255,255,0.03);color:#ffffff}
 
     /* Footer / contact */
     .contact{display:grid;grid-template-columns:1fr 1fr;gap:20px;padding:22px;border-radius:14px;background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent)}
-    .input, textarea{width:100%;padding:12px;border-radius:10px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit}
+    .input, textarea{width:100%;padding:12px;border-radius:10px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit;transition:border-color .2s ease, box-shadow .2s ease, transform .2s ease}
+    .input:hover, textarea:hover,
+    .input:focus, textarea:focus{
+      border-color:#f97316;
+      box-shadow:0 0 0 1px rgba(248,113,113,0.7), 0 10px 30px rgba(15,23,42,0.8);
+      transform:translateY(-2px);
+      outline:none;
+    }
     .btn-submit{padding:12px 16px;border-radius:12px;border:none;background:#b91c1c;font-weight:700;cursor:pointer;box-shadow:0 8px 26px rgba(127,29,29,0.65)}
 
     /* Responsive */
@@ -100,18 +107,8 @@
     a{color:var(--accent2)}
     .muted{color:var(--muted)}
     a.no-underline{text-decoration:none}
-    h3{
-      transition:color .2s ease, transform .2s ease;
-    }
-    h3:hover{
-      color:#b91c1c;
-      transform:translateY(-2px);
-    }
-    /* hover untuk area kontak, judul section, navbar & tombol */
+    /* hover untuk navbar, link kontak & tombol saja (tanpa judul Hubungi Saya) */
     nav a,
-    #projects h3,
-    #about h3,
-    #contact h3,
     #contact a,
     .btn-submit,
     .contact-btn{
@@ -119,9 +116,6 @@
       border-radius:12px;
     }
     nav a:hover,
-    #projects h3:hover,
-    #about h3:hover,
-    #contact h3:hover,
     #contact a:hover,
     .btn-submit:hover,
     .contact-btn:hover{
